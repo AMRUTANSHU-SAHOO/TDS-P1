@@ -22,6 +22,6 @@ This project implements a RAG-based virtual TA for the IITM TDS course, combinin
 
 
 ##Credits
-- IIT Madras Data Science.
+- IIT Madras BS Data Science.
 - Special thanks to Reshav Sharma, June 2025.
 
