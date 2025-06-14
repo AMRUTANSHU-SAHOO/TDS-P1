@@ -1,20 +1,21 @@
 # Use slim Python 3.11 image
 FROM python:3.11-slim
 
-# Install OS-level dependencies (for OCR)
+# Install system dependencies
 RUN apt-get update && apt-get install -y tesseract-ocr && rm -rf /var/lib/apt/lists/*
 
-# Set working directory to your app folder
-WORKDIR /app/app
+# Set working directory
+WORKDIR /app
 
-# Copy all files from your local app/ folder into /app/app inside container
-COPY app/ .
+# Copy everything into the container
+COPY . .
 
 # Install Python dependencies
-RUN pip install --no-cache-dir -r /app/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Set environment variables (if needed)
+# Expose port Render expects
+ENV PORT 8000
 ENV PYTHONUNBUFFERED=1
 
-# Run your app directly with Python
-CMD ["python", "index.py"]
+# Start your FastAPI app using uvicorn with correct module path
+CMD ["uvicorn", "app.index:app", "--host", "0.0.0.0", "--port", "8000"]
