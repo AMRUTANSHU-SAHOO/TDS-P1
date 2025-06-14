@@ -1,5 +1,3 @@
-# Reshav Sharma-2025-TDS-PROJECT 1: tds_virtual_ta/embed.py
-
 import numpy as np
 import json
 import os
