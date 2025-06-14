@@ -1,5 +1,3 @@
-# Reshav Sharma-2025-TDS-PROJECT 1: tds_virtual_ta/index.py
-
 from flask import Flask, request, jsonify
 from rag import answer_question
 from dotenv import load_dotenv
@@ -25,5 +23,5 @@ def health_check():
 
 if __name__ == "__main__":
     import os
-    port = int(os.environ.get("PORT", 5000))  # railway assigns PORT dynamically
+    port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
