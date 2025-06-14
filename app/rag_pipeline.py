@@ -1,5 +1,3 @@
-# Reshav Sharma-2025-TDS-PROJECT 1: tds_virtual_ta/rag_pipeline.py
-
 import os
 import json
 import re
