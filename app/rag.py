@@ -1,5 +1,3 @@
-# Reshav Sharma-2025-TDS-PROJECT 1: tds_virtual_ta/rag.py
-
 import numpy as np
 from embed import load_embeddings, load_metadata
 from openai import OpenAI
